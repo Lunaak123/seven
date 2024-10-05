@@ -25,12 +25,13 @@ const fileUrl = getQueryParam('fileUrl');
 
         // Display the Excel sheet content in HTML table format
         const sheetContentDiv = document.getElementById('sheet-content');
-        const sheetHtml = XLSX.utils.sheet_to_html(sheet, { id: "excel-sheet", editable: true });
+        const sheetHtml = XLSX.utils.sheet_to_html(sheet, { id: "excel-sheet", editable: false });
         sheetContentDiv.innerHTML = sheetHtml;
 
-        // Horizontal scrolling enabled for wide sheets
-        sheetContentDiv.style.overflowX = 'scroll';
-        sheetContentDiv.style.whiteSpace = 'nowrap'; /* Ensures table doesn't wrap */
+        // Make the table fill the page like Excel
+        const table = document.getElementById('excel-sheet');
+        table.style.width = '100%'; // Make it take full page width
+        table.style.tableLayout = 'fixed'; // Equal width for cells
     } catch (error) {
         console.error("Error displaying the Excel sheet:", error);
         alert("Failed to load the Excel sheet. Please try again.");
