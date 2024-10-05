@@ -23,13 +23,14 @@ const fileUrl = getQueryParam('fileUrl');
             return;
         }
 
-        // Display the Excel sheet content in HTML table format, horizontally
+        // Display the Excel sheet content in HTML table format
         const sheetContentDiv = document.getElementById('sheet-content');
         const sheetHtml = XLSX.utils.sheet_to_html(sheet, { id: "excel-sheet", editable: true });
         sheetContentDiv.innerHTML = sheetHtml;
 
         // Horizontal scrolling enabled for wide sheets
         sheetContentDiv.style.overflowX = 'scroll';
+        sheetContentDiv.style.whiteSpace = 'nowrap'; /* Ensures table doesn't wrap */
     } catch (error) {
         console.error("Error displaying the Excel sheet:", error);
         alert("Failed to load the Excel sheet. Please try again.");
