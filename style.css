@@ -1,0 +1,72 @@
+/* Colorful and well-arranged style for the first page */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e3f2fd; /* Light blue background */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: #fff; /* White container */
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #1e88e5; /* Dark blue for header */
+    margin-bottom: 20px;
+}
+
+.input-box, .sheet-list {
+    background-color: #bbdefb; /* Light blue background for the box */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+label, button {
+    font-size: 18px;
+}
+
+#excel-url {
+    width: calc(100% - 150px);
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #1e88e5;
+    border-radius: 6px;
+}
+
+button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #42a5f5; /* Medium blue for buttons */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1e88e5; /* Darker blue on hover */
+}
+
+.sheet-list {
+    margin-top: 20px;
+}
+
+.sheet-link {
+    display: block;
+    margin: 8px 0;
+    color: #1e88e5;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.sheet-link:hover {
+    color: #1565c0; /* Darker blue on hover */
+    text-decoration: underline;
+}
