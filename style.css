@@ -1,72 +1,74 @@
-/* Colorful and well-arranged style for the first page */
+/* General body style */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #e3f2fd; /* Light blue background */
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f0f4f8;
 }
 
-.container {
-    max-width: 800px;
-    margin: 60px auto;
-    padding: 30px;
-    background-color: #fff; /* White container */
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+/* Toolbar style */
+.toolbar {
+    background-color: #00796b; /* Teal background for toolbar */
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1; /* Toolbar stays on top */
 }
 
-h1 {
-    text-align: center;
-    color: #1e88e5; /* Dark blue for header */
-    margin-bottom: 20px;
-}
-
-.input-box, .sheet-list {
-    background-color: #bbdefb; /* Light blue background for the box */
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-label, button {
-    font-size: 18px;
-}
-
-#excel-url {
-    width: calc(100% - 150px);
-    padding: 12px;
-    font-size: 16px;
-    border: 2px solid #1e88e5;
-    border-radius: 6px;
-}
-
-button {
-    padding: 12px;
-    font-size: 16px;
-    background-color: #42a5f5; /* Medium blue for buttons */
-    color: white;
-    border: none;
-    border-radius: 6px;
+.toolbar button {
+    background-color: #ffffff;
+    color: #00796b;
+    border: 1px solid #00796b;
+    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #1e88e5; /* Darker blue on hover */
+.toolbar button:hover {
+    background-color: #004d40;
+    color: white;
 }
 
-.sheet-list {
-    margin-top: 20px;
+/* Container for the sheet content */
+.container {
+    margin-top: 20px; /* Space for toolbar */
+    padding: 10px;
+    display: flex;
+    justify-content: center;
 }
 
-.sheet-link {
+.sheet-content {
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+    padding: 20px;
     display: block;
-    margin: 8px 0;
-    color: #1e88e5;
-    font-weight: bold;
-    text-decoration: none;
+    width: 100%;
 }
 
-.sheet-link:hover {
-    color: #1565c0; /* Darker blue on hover */
-    text-decoration: underline;
+/* Mimicking Excel-like grid for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Cells equally sized */
+}
+
+table th, table td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: left;
+    word-wrap: break-word; /* Prevent overflow */
+}
+
+table th {
+    background-color: #00796b; /* Teal for table headers */
+    color: white;
+}
+
+/* Make the table look like Excel's alternating row colors */
+table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray */
 }
